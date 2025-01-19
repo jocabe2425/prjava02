@@ -1,0 +1,30 @@
+6. Pots veure l'última línia afegida des de la branca main? Per què?
+No es pot veure l'última línia afegida perquè els canvis realitzats a branca00 no han estat fusionats amb main. Cada branca manté el seu propi historial i contingut fins que es fa una fusió explícita. La branca main només reflectirà els canvis si aquests són fusionats amb ella.
+
+7. Pots veure l'última línia afegida des de la branca branca00? Per què?
+Sí, es pot veure l'última línia afegida des de branca00 perquè els canvis es van realitzar i commitejar en aquesta branca. La línia forma part de l'estat actual del fitxer en branca00, però aquests canvis encara no s'han aplicat a altres branques com main.
+
+12c. Comprova que només s'ha actualitzat la branca main únicament. Per què?
+Només s'ha actualitzat la branca main perquè el push realitzat després de la fusió es va executar exclusivament sobre aquesta branca. Cada branca a Git es tracta com una entitat separada, i un push només envia els canvis de la branca activa al repositori remot, deixant intactes les altres branques a menys que també s'enviïn explícitament.
+
+14c. A quants commits de distància (commit ahead) està de la branca main?
+La branca branca01 està 1 commit ahead de main. Això es deu al fet que s'ha fet un commit a branca01 amb el comentari “Versió 1.3 del projecte prjava02” després de crear-la, però aquests canvis no han estat fusionats amb main. Aquesta diferència es pot comprovar utilitzant:
+
+COMANDES EXERCICIS
+1.-
+git branch branca00
+git checkout branca00
+git branch
+5.-
+git branch main
+git status
+git log main
+7.-
+git branch branca00
+(estic a windows, no puc fer el geany nom_arxiu)
+10b.-
+(desde main) git merge branca00
+12.-
+git push origin main
+14a.-
+git push origin branca01
